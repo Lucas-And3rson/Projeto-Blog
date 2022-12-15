@@ -1,0 +1,258 @@
+@charset "UTF-8";
+
+/*
+    Paleta de cores
+    Verde: #49a09d
+    Lilás: #5f2c82
+*/
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/*--------- Modo Dark ----------*/
+:root{
+    --body-bg: rgba(0,0,0,0.05);
+    --nav-bg: #0a0a3f;
+    --a-color: #ffffff;
+    --campo-bg: #3f3fca;
+    --input-bg: #c6c6ff;
+    --btn-bg: #2929c5;
+    --hoverBtn-bg:#3939cf;
+}
+
+.dark:root{
+    --body-bg: rgba(0,0,0,0.9);
+    --nav-bg: #0a0a3f;
+    --a-color: #ffffff;
+    --campo-bg: #09094e;
+    --input-bg: #c6c6ff;
+    --btn-bg: #2929c5;
+    --hoverBtn-bg:#3939cf;
+}
+
+.lua{
+    clear: both;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    margin-top: 1%;
+    left: 1%;
+    border: 2px solid white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    }
+  
+    .lua:hover{
+      background-color: white;
+    }
+    
+    .sol{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      margin-top: 1%;
+      left: 1%;
+      border: 2px solid white;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      }
+  
+      .sol:hover{
+        background-color: white;
+      }
+  
+        .sol{
+            display: none;
+        }
+        .sol i::before{
+        color: orange;
+        font-size: 20px;
+    }
+    .lua i::before{
+        color: orange;
+        font-size: 20px;
+    }
+    
+    html.dark .lua{
+        display: none;
+    }
+    
+    html.dark .sol{
+        display: flex;
+    }
+
+body, html {
+    background-color: var(--body-bg);
+    height: 120vh;
+    width: 100vw;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/*---------------------------------------- HOME ----------------------------------------*/
+.headHome{
+    text-align: center;
+    color: white;
+}
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+nav{
+    background-color: var(--nav-bg);
+    height: 60px;
+}
+
+ul{
+    list-style: none;
+    float: right;
+    margin-right: 30px;
+}
+
+li{
+    clear: both;
+    display: inline-block;
+    padding: 5px;
+    line-height: 60px;
+}
+
+li a{
+    text-decoration: none;
+    color: var(--a-color);
+    cursor: pointer;
+}
+
+li a:hover{
+    border-bottom: 1px solid var(--a-color);
+}
+
+/*TELA DE LOGIN -----------------------------*/
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    background-color: white;
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+}
+
+section#login > div#imagem {
+    display: block;
+    background: #5f2c82 url(../img/backgroundLogin.jpg) no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    height: 150px;
+}
+
+section#login > div#formLogin {
+    display: block;
+    padding: 10px;
+}
+
+div#formLogin > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formLogin > p {
+    font-size: 0.8em;
+}
+
+div#formLogin > p.msgErro{
+    font-size: 0.8em;
+    color: red;
+}
+
+form > div.campo {
+    background-color: var(--campo-bg);
+    border: 2px solid var(--campo-bg);
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > i {
+    color: white;
+    /*background-color: black;*/
+    font-size: 1.9em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: var(--input-bg);
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-10px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+    border: none;
+}
+
+/*botão de logar*/
+form > input.entrar {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+form > input.entrar:hover {
+    background-color: var(--hoverBtn-bg);
+}
+

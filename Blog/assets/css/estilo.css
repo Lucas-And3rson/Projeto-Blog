@@ -1,0 +1,181 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/*--------- Modo Dark ----------*/
+:root{
+    --body-bg: rgba(0,0,0,0.1);
+    --nav-bg: #0a0a3f;
+    --a-color: #ffffff;
+    --campo-bg: #3f3fca;
+    --input-bg: #7373fa;
+    --btn-bg: #2929c5;
+}
+
+.dark:root{
+    --body-bg: rgba(0,0,0,0.9);
+    --nav-bg: #0a0a3f;
+    --a-color: #ffffff;
+    --campo-bg: #09094e;
+    --input-bg: #8d8dfa;
+    --btn-bg: #2929c5;
+}
+
+.lua{
+    clear: both;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    margin-top: 1%;
+    left: 1%;
+    border: 2px solid white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    }
+  
+    .lua:hover{
+      background-color: white;
+    }
+    
+    .sol{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      margin-top: 1%;
+      left: 1%;
+      border: 2px solid white;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      }
+  
+      .sol:hover{
+        background-color: white;
+      }
+  
+        .sol{
+            display: none;
+        }
+        .sol i::before{
+        color: orange;
+        font-size: 20px;
+    }
+    .lua i::before{
+        color: orange;
+        font-size: 20px;
+    }
+    
+    html.dark .lua{
+        display: none;
+    }
+    
+    html.dark .sol{
+        display: flex;
+    }
+  /*-----------------------------*/
+
+
+body{
+    background-color: var(--body-bg);
+}
+
+nav{
+    background-color: var(--nav-bg);
+    height: 60px;
+}
+
+ul{
+    list-style: none;
+    float: right;
+    margin-right: 30px;
+}
+
+li{
+    clear: both;
+    display: inline-block;
+    padding: 5px;
+    line-height: 60px;
+}
+
+li a{
+    text-decoration: none;
+    color: var(--a-color);
+    cursor: pointer;
+}
+
+li a:hover{
+    border-bottom: 1px solid var(--a-color);
+}
+
+.containerpai{
+    width: 90%;
+    margin: auto;
+}
+
+.container1{ 
+    clear: both;
+    background-color: aqua;
+    width: 60%;
+    display: flex;
+    float: left;
+    justify-content: center;
+}
+
+.container1 h1{
+    font-size: 22pt;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+img {
+    width: 170px;
+    height: 180px;
+    max-width: 100%;
+    display: block;
+  }
+
+.container2{
+    justify-content: center;
+    background-color: crimson;
+    width: 40%;
+    display: flex;
+    float: left;
+}
+
+.container2 h1{
+    font-size: 22pt;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .flex > div {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
